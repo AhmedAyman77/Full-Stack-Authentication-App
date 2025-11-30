@@ -323,5 +323,3 @@ Server:
 - [server/models/userModel.js](server/models/userModel.js)
 - [server/routes/userRoutes.js](server/routes/userRoutes.js)
 - [server/utils/generateToken.js](server/utils/generateToken.js)
-
-License: ISC
