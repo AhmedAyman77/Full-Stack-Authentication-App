@@ -1,0 +1,14 @@
+{
+    "editor.formatOnSave": false,
+    "[javascript]": {
+        "editor.formatOnSave": false,
+        "editor.defaultFormatter": null
+    },
+    "editor.formatOnSaveMode": "file",
+    "editor.defaultFormatter": null,
+    "javascript.format.enable": false,
+    "eslint.format.enable": false,
+    "prettier.enable": false,
+    "prettier.requireConfig": true,
+    "editor.codeActionsOnSave": {}
+}
