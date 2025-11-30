@@ -43,7 +43,7 @@ Client UI (React)                          Auth Middleware (cookie JWT)
 
 ## Project Structure
 ```
-.env
+.env.example
 .gitignore
 package.json
 README.md
@@ -77,8 +77,6 @@ client/
             apiSlice.js
             usersApiSlice.js
             authSlice.js
-deploy/
-    AhmedAyman_key.pem
 server/
     server.js
     config/
@@ -287,7 +285,7 @@ curl -X POST http://40.66.49.167:5000/api/users/logout -b cookies.txt
 - LinkedIn: [https://www.linkedin.com/in/ahmed-ayman-25a9b2248/](https://www.linkedin.com/in/ahmed-ayman-25a9b2248/)
 
 ## All files (quick links)
-- [.env](.env)
+- [.env.example](.env.example)
 - [.gitignore](.gitignore)
 - [package.json](package.json)
 - [.vscode/settings.json](.vscode/settings.json)
@@ -316,8 +314,7 @@ Client:
 - [client/src/slices/usersApiSlice.js](client/src/slices/usersApiSlice.js)
 - [client/src/slices/authSlice.js](client/src/slices/authSlice.js)
 
-Server & deploy:
-- [deploy/AhmedAyman_key.pem](deploy/AhmedAyman_key.pem)
+Server:
 - [server/server.js](server/server.js)
 - [server/config/db.js](server/config/db.js)
 - [server/controller/userController.js](server/controller/userController.js)
