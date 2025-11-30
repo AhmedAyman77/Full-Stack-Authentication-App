@@ -16,11 +16,14 @@ import userRouter from './routes/userRoutes.js';
     app.use(express.urlencoded({ extended: true })); // to accept url encoded data in request body
     app.use(cookieParser());
 
+    // routes
+    app.use('/api/users', userRouter);
+
     if (process.env.NODE_ENV === 'production') {
         const __dirname = path.resolve();
         app.use(express.static(path.join(__dirname, 'client', 'dist')));
-
-        app.get('*', (req, res) =>
+        // match any path — use a regex to avoid path-to-regexp '*' parsing error
+        app.get(/.*/, (req, res) =>
             res.sendFile(path.resolve(__dirname, 'client', 'dist', 'index.html'))
         );
     } else {
@@ -29,8 +32,6 @@ import userRouter from './routes/userRoutes.js';
         });
     }
 
-    // routes
-    app.use('/api/users', userRouter);
 
     app.use(notFound); // middleware to handle 404 errors(not matched routes)
     app.use(errorHandler); // middleware to handle other errors
